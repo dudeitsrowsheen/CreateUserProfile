@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multi Step Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <br>
+      <h1>Add New User Profile</h1>
+    </header>
+
+    <div class="sidenav">
+      <a href="#login">Add Login Details</a>
+      <a href="#userGroup">Select User Group</a>
+      <a href="#submit">Submit The Form</a>
+    </div>
+
+    <!-- partial:index.partial.html -->
+    <section>
+      <div class="container">
+        <form>
+          <div class="step step-1 active">
+            <div class="form-group">
+              <label for="firstName">Email</label>
+              <input type="text" id="email" name="email" />
+            </div>
+            <div class="form-group">
+              <label for="password1">Password</label>
+              <input type="text" id="password1" name="password1" />
+            </div>
+            <div class="form-group">
+              <label for="password2">Verify Password</label>
+              <input type="text" id="password2" name="password2" />
+            </div>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="step step-2">
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <select id="userGroup">
+                <option value="GroupA"><a href="#">Group A</a></option>
+                <option value="GroupB"><a href="#">Group B</a></option>
+                <option value="GroupC"><a href="#">Group C</a></option>
+              </select>
+            </div>
+            <button type="button" class="previous-btn">Prev</button>
+            <button type="button" class="next-btn">Next</button>
+          </div>
+
+          <div class="step step-3">
+            <div class="form-group">
+              <label for="emailConfirm">Email</label>
+              <input
+                type="text"
+                id="emailConfirm"
+                name="emailConfirm"
+                disabled
+              />
+            </div>
+            <div class="form-group">
+              <label for="groupConfirm">User Group</label>
+              <input
+                type="text"
+                id="groupConfirm"
+                name="groupConfirm"
+                disabled
+              />
+            </div>
+            <button type="button" class="previous-btn">Prev</button>
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- partial -->
+    <script src="./script.js"></script>
+  </body>
+</html>
